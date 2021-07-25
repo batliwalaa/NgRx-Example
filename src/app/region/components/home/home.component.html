@@ -1,0 +1,23 @@
+<div class="home">
+    <div class="home--dropdown">
+        <app-dropdown
+            [options]="regions$"
+            id="region"
+            label="Regions"
+            placeHolder="Please select"
+            (optionSelected)="onRegionChange($event)"
+        ></app-dropdown>
+    </div>
+    <div class="home--dropdown">
+        <app-dropdown
+            [options]="countries$"
+            id="countries"
+            label="Countries"
+            placeHolder="Please select"
+            (optionSelected)="onCountryChange($event)"
+        ></app-dropdown>
+    </div>
+    <div class="home--country">
+        <app-country [country]="selectedCountry$ | async"></app-country>
+    </div>
+</div>

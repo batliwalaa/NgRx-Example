@@ -1,0 +1,32 @@
+@import '../../../../styles/variables';
+
+.dropdown {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    position: relative;
+
+    &--select {
+        height: 44px;
+        width: 100%;
+        border: var(--border-transparent);
+        padding: 12px 6px 6px 11px;
+        background: transparent;
+    }
+
+    &--label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: transparent;
+        text-align: left;
+        padding: 15px 11px;
+        color: #a1a1a1;
+        font-size: 0.7em;
+        padding-top: 3px;
+        animation: move-label-up 0.3s ease-in-out;
+        z-index: 1;
+        background: transparent;
+        height: 10px;
+    }
+}

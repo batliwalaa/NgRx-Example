@@ -1,0 +1,24 @@
+<div class="country" *ngIf="country">
+    <div class="country__row">
+        <span class="country__row--label">Name: </span>
+        <span class="country__row--value">{{country.name}}</span>
+    </div>
+    <div class="country__row">
+        <span class="country__row--label">Capital: </span>
+        <span class="country__row--value">{{country.capital}}</span>
+    </div>
+    <div class="country__row">
+        <span class="country__row--label">Population: </span>
+        <span class="country__row--value">{{country.population}}</span>
+    </div>
+    <div class="country__row">
+        <span class="country__row--label">Currencies: </span>
+        <span class="country__row--value">{{getCurrencies(country.currencies)}}</span>
+    </div>
+    <div class="country__row">
+        <span class="country__row--label">Flag: </span>
+        <span class="country__row--value country__row--flag">
+            <img [src]="country.flag" [alt]="country.name"/>
+        </span>
+    </div>
+</div>

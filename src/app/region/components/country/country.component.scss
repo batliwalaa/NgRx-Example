@@ -1,0 +1,39 @@
+@import '../../../../styles/variables';
+
+.country {    
+    &__row {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 150px 350px;
+        
+        &--label,
+        &--value {
+            padding: 7px;
+            border: var(--border);
+            border-radius: var(--border-radius);
+            border-right: var(--border-transparent);
+            border-bottom: var(--border-transparent);
+
+            &:last-child {
+                border-right: var(--border);
+            }
+        }
+
+        &:last-child {
+            span {
+                border-right: var(--border);
+                border-bottom: var(--border);
+                
+                &:first-child {
+                    border-right: var(--border-transparent);
+                }
+            }
+        }
+
+        &--flag > img {
+            position: relative;
+            width: 30px;
+            height: 19px;
+        }
+    }
+}

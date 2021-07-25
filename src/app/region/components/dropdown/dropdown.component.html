@@ -1,0 +1,18 @@
+<div class="dropdown">
+    <select
+        class="dropdown--select"
+        [id]="id"
+        name="model"
+        [attr.aria-label]="ariaLabel"
+        (change)="itemChange($event)"
+    >
+        <option disabled selected value="">{{ placeHolder }}</option>
+        <option *ngFor="let o of options | async" [selected]="o === value" [value]="o">
+            {{ o }}
+        </option>
+    </select>
+    <label class="dropdown--label">
+        {{ label }}
+    </label>
+    <div class="focus-indicator"></div>
+</div>
